@@ -234,6 +234,7 @@ hr {
         text-align: center;
         min-width: fit-content;
         min-width: 500px;
+        margin: 10px;
 
   
         color: var(--secondary-color);
@@ -310,7 +311,7 @@ hr {
         min-width: fit-content;
         min-height: fit-content;
         max-height: fit-content;
- 
+        left: 30px;
         padding: 5px;
         color: var(--primary-color);
         font-size: var(--text-size);
