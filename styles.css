@@ -3,7 +3,7 @@
     --primary-color:#0F0F0F;
     --secondary-color:#FFFFFF;
     --font-size:1.2rem;
-    --header-size:50px;
+    --header-size:3rem;
     --subheader-size:4rem;
     --text-size:24px;
     --small-size:18px;
@@ -25,9 +25,9 @@
     border: 0;
 }
 body{
-    background-color: var(--primary-color);
     overflow-x: hidden;
     font-family: var(--header-font);
+    background-color: var(--primary-color);
     
 
 }
@@ -38,6 +38,8 @@ body{
     gap: 10px;
     justify-content: center; 
     align-content: center; 
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 6%, rgba(48,47,47,1) 64%, rgba(68,65,65,1) 100%);
 }
 
 .mobileHomeTitle{
@@ -57,10 +59,6 @@ body{
     min-height:60px;
     max-height: 70px;
     background-color: var(--secondary-color);
-}
-
-.container{
-    display: none;
 }
 
 .navList {
@@ -104,68 +102,47 @@ body{
 .home {
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    min-height: 100vh;
+
+    min-height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .home-text h1{
-    font-size: 40px;
+    font-size:2rem;
     font-weight: 200;
 }
 
 .home-text {
     text-align: center; 
-    max-width: 600px; 
+    max-width: 50%; 
     margin: 0 auto; 
     padding: 20px; 
-    bottom: 100px;
+    bottom: 130px;
+    font-size:10px;
+
+}
+.home-text p {
+    font-size: 1rem;
 }
 
-.moreBtn{
-    text-align: center; 
-    margin: 0 auto; 
-    padding: 20px; 
-}
 
-.home-text {
-    position: relative;
-    left: 100px;
-    font-size: 18px;
-    text-align: left;
-    
-}
-
-.iphone{
-    position: relative;
-    left: 100px;
-    bottom: 100px;
-}
 .moreBtn{
     background-color: var(--secondary-color);
-    width: fit-content;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 5px;
     margin-top: 10px;
-    float: left;
+    max-width: 50%; 
+    position: relative;
+    left: 25%;
+
 
 }
 
 .moreBtn p {
     color: var(--primary-color);
 }
-
-
-.column {
-    margin-right: 150px;
-
-}
-
-/* .home-text{
-    width: 50%;
-} */
-/* Home text styles */
 
 
 .letsGo{
@@ -271,9 +248,24 @@ hr {
     align-items: center;
     text-align: center;
 }
-.home-text p{
-padding: 10px;
 
+.home-text{
+    margin: 100px;
+}
+.home-text h1{
+    position: relative;
+    bottom: 50px;
+}
+.home-text p:nth-child(2){
+padding: 10px;
+position: relative;
+    bottom: 100px;
+
+}
+
+.iphone{
+    position: relative;
+    right: 25px;
 }
 
 .moreBtn{
@@ -282,6 +274,7 @@ padding: 10px;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 500px;
 
 }
 
@@ -291,17 +284,10 @@ padding: 10px;
     top: 100px;
     left: 2%;
     max-width: 500px;
+    margin: 100px;
 
   
 }
-
-.iphone{
-    position: relative;
-
-    left: 10%;
-    top: 85px;
-}
-
 
     /* nav{
         width: 100vw; 
@@ -309,10 +295,6 @@ padding: 10px;
         z-index: 1000;
         background-color: orange;
     } */
-
-    
-
-
     hr,.navList{
         display: none;
 
@@ -321,13 +303,14 @@ padding: 10px;
         position: relative;
         font-weight: 450;
     }
-    h1,p{
-       
-        color: var(--secondary-color);
-    }
+
 
     .whoAreWe p {
         text-align: center;
+    }
+
+    .moreBtn p{
+        font-size:30px;        
     }
    
     .findOutMoreBtn{
@@ -431,6 +414,7 @@ padding: 10px;
   }
 
   .hamburger-lines {
+    background-color: pink;
     display: block;
     height: 14px;
     width: 20px;
@@ -456,7 +440,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     height: 2.5px;
     width: 100%;
     border-radius: 10px;
-    background: var(--secondary-color);
+    background-color: black;
    
   }
 
