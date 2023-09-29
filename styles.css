@@ -14,6 +14,7 @@
 
 
 }
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
@@ -37,7 +38,6 @@ body{
     gap: 10px; /* Gap between grid items */
     justify-content: center; /* Center content horizontally */
     align-content: center; /* Center content vertically */
-    /* height: 300px; */
 }
 
 .mobileHomeTitle{
@@ -56,7 +56,7 @@ body{
     width: 100%;
     min-height:60px;
     max-height: 70px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
 .container{
@@ -69,20 +69,20 @@ body{
     padding: 0;
     display: flex; 
     justify-content:  center;
-    font-weight: var(--light-weight);
   }
 
-.navList li:nth-child(n+2):nth-child(-n+7) {
+.navList li:nth-child(n+1):nth-child(-n+5) {
     position: relative;
     bottom: 40px;
     font-size: var(--small-size);
-
+    font-family: 'Martel Sans', sans-serif;
 }
 
-.navList li:nth-child(1){
+.navList li:last-child{
     border-radius: 10px;
-    background-color:var(--primary-color);
-    color: var(--secondary-color);
+    background: var(--secondary-color);
+    border: var(--primary-color);
+    color: var(--primary-color);
     position: relative;
     bottom: 50px;
     padding: 10px;
@@ -91,7 +91,8 @@ body{
   
 .navList li{
     margin-right: 30px;
-    color: var(--primary-color); 
+    color: var(--secondary-color); 
+    font-weight: 50;
     
 }
 .navList li:hover{
@@ -114,12 +115,13 @@ body{
 }
 
 .homeImage1 {
-    width: 30%;
+    width: 35%;
     border-radius: 10px;
     transition: transform 0.3s;
     position: relative;
     display: flex;
     justify-content: flex-start;
+    bottom: 50px;
 }
 
 .homeImage1:hover {
@@ -131,7 +133,6 @@ body{
     max-width: fit-content;
     border-radius: 20px;
     margin-left: 80px;
-    /* From https://css.glass */ 
 }
 
 
@@ -261,20 +262,24 @@ hr {
     }
     h1{
         position: relative;
-        font-weight: 650;
+        font-weight: 450;
         font-size: var(--subheader-size);
         bottom: 150px;
 
     }
     h1,p{
-        font-weight: 175;
+       
         color: var(--secondary-color);
-            width: 100%;
+        width: 100%;
         display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    .whoAreWe p {
+        text-align: center;
     }
 
   
@@ -288,6 +293,7 @@ hr {
 
     .home-text h1{
         margin-top: 75px;
+        font-size: 90px;
     }
 
     .homeDesc{
@@ -315,7 +321,11 @@ hr {
         min-width: fit-content;
         min-height: fit-content;
         max-height: fit-content;
-        left: 30px;
+    margin: 0 auto; 
+    text-align: center;
+    position: relative;
+    left: 50%; 
+    transform: translateX(-50%); 
         padding: 5px;
         color: var(--primary-color);
         font-size: var(--text-size);
@@ -323,11 +333,8 @@ hr {
 
     .whoAreWeDesc{
         min-width: 300px;
-
-        
-        
-
     }
+
     .whoAreWe h1,.whoAreWeH2{
         position: relative;
         top: 15px;
@@ -365,10 +372,10 @@ hr {
 
 }
 .whoAreWeDesc{
-    width: 70%;
+    width: 50%;
     flex-grow: 1;
     flex-direction: column;
-    padding: 50px;
+    padding: 25px;
     
 }
 .letsWorkBtn{
@@ -398,12 +405,13 @@ hr {
     z-index: 5;
     opacity: 0;
     cursor: pointer;
+    
   }
 
   .hamburger-lines {
     display: block;
-    height: 26px;
-    width: 32px;
+    height: 14px;
+    width: 20px;
     position: absolute;
     top: 17px;
     left: 20px;
@@ -411,14 +419,23 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+background: rgba(255, 255, 255, 0.2);
+border-radius: 12px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    
   }
 
   .hamburger-lines .line {
     display: block;
-    height: 4px;
+    height: 2.5px;
     width: 100%;
     border-radius: 10px;
-    background: #0e2431;
+    background: var(--secondary-color);
+   
   }
 
   .nav-container .hamburger-lines .line1 {
