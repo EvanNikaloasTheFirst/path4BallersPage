@@ -44,6 +44,13 @@ body{
     display: none;
 }
 
+.nav{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
 .nav-box{
     position: relative;
     width: 100%;
@@ -303,7 +310,7 @@ hr {
         min-width: fit-content;
         min-height: fit-content;
         max-height: fit-content;
-        left: 100px;
+ 
         padding: 5px;
         color: var(--primary-color);
         font-size: var(--text-size);
