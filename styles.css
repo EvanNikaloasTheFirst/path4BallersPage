@@ -225,6 +225,10 @@ hr {
     overflow-x: hidden;
 
    }
+
+   .grid-container{
+    overflow-x: hidden;
+   }
    
     .home {
         background-color: var(--primary-color);
