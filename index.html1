@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Title</title>
+</head>
+<body>
+    <nav>
+        <ul class="navList">
+            <img src=images/logo.JPG alt="" class="logo">
+            <li>Home</li>
+            <li>About us</li>
+            <li>Products</li>
+            <li>Contact us</li>
+            <li>Shop</li>
+            <li>Testimonials</li>
+        </ul>
+    </nav>
+    <main>
+        
+
+        <div class="container">
+            <div class="imageContainer">
+                <img src="images/homeimage.JPG" alt="" class="homeImage1">
+            <img src="images/homeImage2.JPG" alt="" class="homeImage2">
+            </div>
+            <div class="home-text">
+                <h1>Path4Ballers</h1>
+            <br>
+            <p>Join us on a journey of discovery and growth.
+                Explore,learn and connect with footballers all
+                around the world.
+            </p>
+            <hr>
+            <div class="findOutMoreBtn">
+                <p>Join the journey to become a pro</p>
+                
+            </div>
+            <div class="social-box">
+                <ul>
+                    <li><img src="images/instagram_logo.png" alt="" class="instagram"></li>
+                    <li><img src="images/tiktok.png" alt="" class="tiktok"></li>
+                </ul>
+                </div>
+            </div>
+            <div class="whoAreWe">
+                <h1>Who are we</h1>
+                <!-- <img src="images/together.JPG" alt="" class="togetherImg"> -->
+    
+    
+            </div>
+    
+
+        </div>
+
+
+        
+        
+
+    </main>
+    
+</body>
+</html>

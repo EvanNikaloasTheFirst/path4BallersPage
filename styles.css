@@ -1,0 +1,444 @@
+/* style.css */
+:root{
+    --primary-color:#0F0F0F;
+    --secondary-color:#FFFFFF;
+    --font-size:1.2rem;
+    --header-size:50px;
+    --subheader-size:4rem;
+    --text-size:24px;
+    --small-size:18px;
+    --small-font:'Raleway', sans-serif;
+    --header-font:'Krona One', sans-serif;
+    --light-weight:100;
+
+
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    background-color: var(--primary-color);
+    overflow-x: hidden;
+    font-family: var(--header-font);
+    
+
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* One column */
+    grid-template-rows: auto auto; /* Two rows */
+    gap: 10px; /* Gap between grid items */
+    justify-content: center; /* Center content horizontally */
+    align-content: center; /* Center content vertically */
+    /* height: 300px; */
+}
+
+.mobileHomeTitle{
+    display: none;
+}
+
+.nav-box{
+    position: relative;
+    width: 100%;
+    min-height:60px;
+    max-height: 70px;
+    background-color: var(--secondary-color);
+}
+
+.container{
+    display: none;
+}
+
+.navList {
+    position: relative;
+    list-style: none; 
+    padding: 0;
+    display: flex; 
+    justify-content:  center;
+    font-weight: var(--light-weight);
+  }
+
+.navList li:nth-child(n+2):nth-child(-n+7) {
+    position: relative;
+    bottom: 40px;
+    font-size: var(--small-size);
+
+}
+
+.navList li:nth-child(1){
+    border-radius: 10px;
+    background-color:var(--primary-color);
+    color: var(--secondary-color);
+    position: relative;
+    bottom: 50px;
+    padding: 10px;
+}
+
+  
+.navList li{
+    margin-right: 30px;
+    color: var(--primary-color); 
+    
+}
+.navList li:hover{
+    text-decoration: underline;
+    
+}
+
+
+.home {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobileHomeImage1{
+    display: none;
+}
+
+.homeImage1 {
+    width: 30%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.homeImage1:hover {
+    transform: translateY(-10px);
+}
+
+/* Home text styles */
+.home-text {
+    max-width: fit-content;
+    border-radius: 20px;
+    margin-left: 80px;
+    /* From https://css.glass */ 
+}
+
+
+.text-content {
+    display: flex;
+    align-items: center;
+}
+
+.text-wrapper {
+    flex: 1;
+}
+
+.home-text h1 {
+    color: var(--secondary-color);
+
+
+}
+
+p {
+    color: var(--secondary-color);
+    font-size: var(--text-size);
+    font-weight: var(--light-weight);
+
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--secondary-color);
+    margin: 50px 0;
+    max-width: 100%;
+}
+
+.whoAreWe h1{
+    padding: 15px;
+    font-weight: 475;
+    color: var(--primary-color);
+    padding: 10px;
+}
+.whoAreWeDesc{
+    color: var(--primary-color);
+}
+
+.findOutMoreBtn{
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    min-width: fit-content;
+    max-width:fit-content;
+    min-height: fit-content;
+    max-height: fit-content;
+    padding: 5px;
+    float:left;
+    margin-right: 5px;
+   
+}
+
+.followUsBtn p {
+    position: relative;
+    font-size: var(--small-size);
+    top: 5px;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    padding: 12px;
+    border-radius: 10px;
+}
+.findOutMoreBtn p{
+    color: var(--primary-color);
+    font-size: var(--small-size);
+}
+
+
+.instagram {
+    position: relative;
+    bottom: 5px;
+    width:70px;
+    right: 20px;
+
+}
+.tiktok{
+    position: relative;
+    width:71px;
+    bottom:10px;
+    right: 65px;
+
+}
+
+
+
+@media (max-width: 858px) {
+
+   body{
+    overflow-x: hidden;
+
+   }
+   
+    .home {
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 50px;
+        min-width: fit-content;
+        min-width: 500px;
+
+  
+        color: var(--secondary-color);
+    }
+
+    .container{
+        display: block;
+    }
+    /* nav{
+        width: 100vw; 
+        height: 100vh; 
+        z-index: 1000;
+        background-color: orange;
+    } */
+ 
+
+    hr,.navList{
+        display: none;
+
+    }
+    h1{
+        font-weight: 650;
+        font-size: var(--subheader-size);
+
+    }
+    h1,p{
+        font-weight: 175;
+        color: var(--secondary-color);
+  width: 100%;
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+
+  
+    .home-text { 
+        width: 500px;
+        margin: 100px;
+        font-size: var(--text-size);
+    }
+
+  
+
+    .home-text h1{
+        margin-top: 100px;
+    }
+    
+    .homeImage1{
+        display: none;
+    }
+
+    .mobileHomeImage1{
+        display: flex;
+        width: 100%;
+        border-radius: 10px;
+        position: relative;
+        padding-bottom: 100px;
+        
+    }
+    .findOutMoreBtn{
+        background-color: var(--secondary-color);
+        border-radius: 5px;
+        min-width: fit-content;
+
+        min-height: fit-content;
+        max-height: fit-content;
+        padding: 5px;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+        font-size: var(--text-size);
+    }
+
+    .whoAreWeDesc{
+        min-width: 300px;
+        margin: 100px;
+        
+        
+
+    }
+    .whoAreWe h1,.whoAreWeH2{
+        margin: 50px;
+        
+    }
+    
+  
+
+    .letsWorkBtn{
+        margin-bottom: 100px;
+    }
+
+    .instagram, .tiktok{
+        display:none;
+    }
+}
+
+.whoAreWe{
+
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+    min-width: fit-content;
+    min-width: 500px;
+    padding: 30px;
+}
+.whoAreWe h1{
+    font-weight: 650;
+    font-size: var(--subheader-size);
+}
+
+.together{
+    width: 70%;
+    position: relative;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+    margin-top: 10px;
+    right: -100%;
+    transition: right 1s ease;
+
+}
+.whoAreWeDesc{
+    width: 40%;
+    padding: 10px;
+    flex-grow: 1;
+    flex-direction: column;
+    
+}
+.letsWorkBtn{
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    min-width: fit-content;
+    max-width: 50px;
+    min-height: fit-content;
+    max-height: fit-content;
+    padding: 5px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-size: var(--text-size);
+}
+
+.letsWorkBtn:hover{
+    transform: scale(.8);
+}
+
+.checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+  }
+
+  .nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .nav-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .logo{
+    display: none;
+  }

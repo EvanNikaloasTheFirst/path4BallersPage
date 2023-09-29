@@ -1,0 +1,175 @@
+:root{
+    --primary-color:#0F0F0F;
+    --secondary-color:#FFFFFF;
+    --font-size:1.2rem;
+    --header-size:4rem;
+    --text-size:1rem;
+    --small-size:.6rem;
+}
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Krona One', sans-serif;
+    
+}
+
+body{
+    background-color: var(--primary-color);
+    height: 100vh;
+
+}
+/* Layout page */
+nav{
+    width: 100;
+    min-height:60px;
+    max-height: 70px;
+    background-color: var(--secondary-color);
+}
+
+.navList {
+    position: relative;
+    list-style: none; 
+    padding: 0;
+    display: flex; 
+    justify-content: flex-end; 
+  }
+
+.navList li:nth-child(n+2):nth-child(-n+7) {
+    position: relative;
+    top: 18px;
+    font-size: var(--text-size);
+
+}
+  
+.navList li{
+    margin-right: 10px;
+    color: var(--primary-color); 
+    
+}
+
+.logo{
+    position: absolute;
+    display: flex; 
+    left: 0;
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 80px;
+    border-radius: 13px;
+    
+}
+
+/* Home */
+.container {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    min-height: fit-content;
+    max-height: fit-content;
+    
+}
+
+/* Image styles */
+.imageContainer {
+    position: relative;
+    left: 100px;
+    top: 10px;
+}
+
+.imageContainer img {
+    max-width: 265px; 
+    border: 2px solid #333;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* First image */
+.homeImage1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Second image */
+.homeImage2 {
+    position: absolute;
+    top: 150px;
+    left: 175px;
+    z-index: 1;
+}
+
+/* Home text styles */
+.home-text {
+    flex: 1;
+    text-align: left; /* Align the text to the left */
+    position: absolute;
+    right: 220px;
+    top: 40vh; /* Align the text div with the top of the container */
+    min-width: 240px;
+    max-width: 300px;
+}
+
+.home-text h1 {
+    font-size: var(--header-size);
+    color: var(--secondary-color);
+}
+
+.home-text p {
+    color: var(--secondary-color);
+    font-size: var(--text-size);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--secondary-color);
+    margin: 20px 0;
+}
+
+.findOutMoreBtn{
+    background-color: var(--secondary-color);
+    border-radius: 3px;
+    min-width: fit-content;
+    max-width: 50px;
+    min-height: fit-content;
+    max-height: fit-content;
+    padding: 5px;
+    color: var(--primary-color);
+    float: right;
+}
+.findOutMoreBtn p{
+    color: var(--primary-color);
+    font-size: var(--text-size);
+}
+
+.social-box{
+    float: right;
+    right: 0;
+}
+
+.social-box img{
+    width:70px;
+    padding-top: 10px;
+    position: relative;
+    
+}
+
+.social-box ul{
+    display: flex; 
+    list-style: none;
+    
+}
+
+.instagram {
+    bottom: 5px;
+    left: 50px;
+}
+.tiktok{
+    left: 15px;
+}
+
+/* Who are we */
+.whoAreWe{
+    background-color: var(--secondary-color);
+    width: 100vw;
+}
