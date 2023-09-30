@@ -360,11 +360,7 @@ bottom: 100px;
     }
 
     .testimonials{
-        display: inline-block;
-    min-height: fit-content;
-    position: relative;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+        
         position: relative;
         margin-right: 150px;
         overflow-y:scroll ;
