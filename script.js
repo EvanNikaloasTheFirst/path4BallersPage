@@ -39,17 +39,35 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 // Get a reference to the element with the class "nav-box"
-var navBoxElement = document.getElementsByClassName('.nav-box');
+var navBoxElement = document.querySelector('.highlight');
 
 
-var navElement = document.querySelector('.checkbox');
+var navElement = document.querySelector('nav-container input[type="checkbox"]:checked ~ .menu-items');
 navBoxElement.addEventListener('click', function() {
     // Your code to run when the element is clicked
     alert('Nav box clicked!');
-    console.log('clicked')
-    navElement.style.width = '';
-    navElement.style.height = '';
-    navElement.style.zIndex = '';
-    navElement.style.backgroundColor = '';
+ 
     // You can replace this alert with any other JavaScript code you want to execute.
 });
+
+function toggleMenu() {
+    // Get the navigation menu element by its ID
+    var menu = document.querySelector(".line"); 
+    var nav = document.querySelector("nav"); 
+    var navList = document.querySelector(".navList"); 
+    var body = document.querySelector("body"); 
+    
+    // Toggle the visibility of the menu
+  if (navList.style.display === "block") {
+    navList.style.display = "none"; 
+    nav.style.display = "none"; 
+    body.classList.remove("no-scroll"); // Enable scrolling
+  } else {
+    navList.style.display = "block"; 
+    nav.style.display = "block"; 
+    body.classList.add("no-scroll"); // Disable scrolling
+  }
+}
+
+
+

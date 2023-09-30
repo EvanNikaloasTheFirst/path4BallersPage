@@ -3,8 +3,8 @@
     --primary-color:#0F0F0F;
     --secondary-color:#FFFFFF;
     --font-size:1.2rem;
-    --header-size:3rem;
-    --subheader-size:4rem;
+    --header-size:2rem;
+    --subheader-size:3rem;
     --text-size:24px;
     --small-size:18px;
     --small-font:'Raleway', sans-serif;
@@ -38,8 +38,7 @@ body{
     gap: 10px;
     justify-content: center; 
     align-content: center; 
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 6%, rgba(48,47,47,1) 64%, rgba(68,65,65,1) 100%);
+    background: var(--primary-color)
 }
 
 .mobileHomeTitle{
@@ -51,8 +50,16 @@ body{
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
+    z-index: 1000;
 }
 
+.container{
+    display: none;
+}
+
+.container{
+    display: none;
+}
 .nav-box{
     position: relative;
     width: 100%;
@@ -102,12 +109,17 @@ body{
 .home {
     background-color: var(--primary-color);
     color: var(--secondary-color);
-
     min-height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    position: relative;
+    overflow: hidden;
+
+  }
+  
+  
+  
 
 .home-text h1{
     font-size:2rem;
@@ -131,20 +143,32 @@ body{
 .moreBtn{
     background-color: var(--secondary-color);
     border-radius: 4px;
-    padding: 5px;
+    padding: 15px;
     margin-top: 10px;
     max-width: 50%; 
     position: relative;
     left: 25%;
-
-
 }
 
 .moreBtn p {
     color: var(--primary-color);
 }
 
+.moreBtn:hover{
+    box-shadow: rgba(251, 251, 251, 0.35) 0px 5px 15px;
+}
 
+.highlight {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    margin: 2px;
+    cursor: pointer;
+  }
+  
+  /* Apply a different color when hovering over the element */
+  .highlight:hover {
+    color: #49484829; /* Change this to the desired color */
+  }
 .letsGo{
     background-color: var(--secondary-color);
     border-radius: 6px;
@@ -263,6 +287,10 @@ position: relative;
 
 }
 
+.container{
+    display: block;
+}
+
 .iphone{
     position: relative;
     right: 25px;
@@ -282,27 +310,51 @@ position: relative;
     flex-grow: 1;
     flex-direction: column;
     top: 100px;
-    left: 2%;
-    max-width: 500px;
-    margin: 100px;
+    max-width: 100px;
+    max-width: 100%;
+
 
   
 }
-
-    /* nav{
+    .navList{
+        position: relative;
+        background-color: var(--primary-color);
+        min-width: fit-content;
+        min-height: fit-content;
+        max-height: fit-content;
+        margin: 0 auto; 
+        text-align: center;
+        position: relative;
+        left: 50%; 
+        transform: translateX(-50%); 
         width: 100vw; 
         height: 100vh; 
-        z-index: 1000;
-        background-color: orange;
-    } */
-    hr,.navList{
-        display: none;
+        animation: fadeIn 1s;
+        padding-top:30px;
+    }
 
+    .navList li{
+        font-size: 32px;
+        padding-top:50px;
+        color: var(--secondary-color);
+        font-size: 28px;
+        font-weight: 500;
     }
-    h1{
+
+
+
+    .navList li:last-child{
+        
         position: relative;
-        font-weight: 450;
+        top: 5px;
+        padding: 10px;
+        background-color: var(--secondary-color);
+        width: fit-content;
+        left: 48%; 
+        transform: translateX(-50%); 
+        color: var(--primary-color);
     }
+
 
 
     .whoAreWe p {
@@ -366,13 +418,14 @@ position: relative;
 }
 
 .together{
-    width: 70%;
+    width: 50%;
     position: relative;
     border-radius: 10px;
     border: 2px solid var(--primary-color);
     margin-top: 10px;
     right: -100%;
     transition: right 1s ease;
+    margin-bottom: 20px;
 
 
 }
@@ -425,12 +478,12 @@ position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-background: rgba(255, 255, 255, 0.2);
-border-radius: 12px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 10px;
     
   }
@@ -441,7 +494,6 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     width: 100%;
     border-radius: 10px;
     background-color: black;
-   
   }
 
   .nav-container .hamburger-lines .line1 {
@@ -477,3 +529,12 @@ border: 1px solid rgba(255, 255, 255, 0.3);
   .nav-container input[type="checkbox"]:checked ~ .logo{
     display: none;
   }
+
+
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  
