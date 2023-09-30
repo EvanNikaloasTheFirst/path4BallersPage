@@ -276,7 +276,7 @@ bottom: 100px;
         left: 65%; 
         transform: translateX(-60%); 
         animation: fadeIn 1s forwards; /* Use 'forwards' to keep the final state after animation */
-        padding-top:30px;
+        padding-top:75px;
     }
 
     .navList li{
