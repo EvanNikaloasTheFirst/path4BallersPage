@@ -268,15 +268,13 @@ bottom: 100px;
         position: relative;
         background-color: var(--primary-color);
         min-width: fit-content;
-        min-height: fit-content;
-        max-height: fit-content;
+        min-height: 100vh;
+        max-height: 100vh;
         margin: 0 auto; 
         text-align: center;
         position: relative;
-        left: 60%; 
+        left: 65%; 
         transform: translateX(-60%); 
-        width: 100vw; 
-        height: 100vh; 
         animation: fadeIn 1s forwards; /* Use 'forwards' to keep the final state after animation */
         padding-top:30px;
     }
@@ -365,6 +363,7 @@ bottom: 100px;
         position: relative;
         margin-right: 150px;
         overflow-y:scroll ;
+        padding: 100px;
     }
     
       
@@ -390,7 +389,7 @@ bottom: 100px;
 }
 
 .together{
-    width: 50%;
+    width: 70%;
     position: relative;
     border-radius: 10px;
     border: 2px solid var(--primary-color);
