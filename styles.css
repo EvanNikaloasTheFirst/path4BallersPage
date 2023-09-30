@@ -108,14 +108,14 @@ body{
 
 
 .home {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    min-height: fit-content;
     display: flex;
-    justify-content: center;
+    flex-direction:column;
     align-items: center;
-    position: relative;
-    overflow: hidden;
+    text-align: center;
+    min-width: fit-content;
+    margin: 150px;
+    color: #FFFFFF;
+    bottom: 100px;
 
   }
   
@@ -123,15 +123,13 @@ body{
   
 
 .home-text h1{
-    font-size:2rem;
+    font-size:25px;
     font-weight: 200;
 }
 
 .home-text {
     text-align: center; 
-    max-width: 50%; 
-    margin: 0 auto; 
-    padding: 20px; 
+    padding: 100px; 
     bottom: 130px;
     font-size:10px;
 
@@ -148,7 +146,7 @@ body{
     margin-top: 10px;
     max-width: 50%; 
     position: relative;
-    left: 25%;
+    left: 20%;
 }
 
 .moreBtn p {
@@ -262,19 +260,24 @@ hr {
 
    }
 .home {
+    min-width: fit-content;
+    min-height: fit-content;
+    max-height: fit-content;
+    margin: 0 auto; 
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    position: relative;
+    left: 50%; 
+    transform: translateX(-50%); 
 }
 
 .home-text{
     margin: 100px;
+    max-width: fit-content;
 }
 .home-text h1{
     position: relative;
     bottom: 50px;
+
 }
 .home-text p:nth-child(2){
 padding: 10px;
@@ -289,7 +292,7 @@ bottom: 100px;
 
 .iphone{
     position: relative;
-    right: 25px;
+    max-width:350px;
 }
 
 .moreBtn{
@@ -298,7 +301,6 @@ bottom: 100px;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 500px;
 
 }
 
@@ -408,8 +410,6 @@ bottom: 100px;
     .whoAreWe h1,.whoAreWeH2{
         position: relative;
         top: 15px;
-
-        
     }
     .instagram, .tiktok{
         display:none;
@@ -431,9 +431,9 @@ bottom: 100px;
     min-width: fit-content;
     min-width: 500px;
 }
-.whoAreWe h1{
+.whoAreWe h1,h2{
     font-weight: 650;
-    font-size: var(--subheader-size);
+    font-size:25px;
 }
 
 .together{

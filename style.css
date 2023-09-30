@@ -1,22 +1,16 @@
-  
-            <img src="images/Component 1.png" alt="" class="homeImage1">
+<h1>We are a <span class="highlight">community</span> of footballers helping you 
+achieve your potential and<span class="highlight">
+    break limits.
+</span> 
+</h1>
+<br>
+<p>Join our community for access drills,motivational 
+content and access to all the resources you need to become the best version you can be!
+</p>
+<br>
+<img src="images/iphone2.png" alt=""  class="iphone" style="width: 600px;">
 
-            <div class="home-text">
-
-                <h1>Path4Ballers</h1>
-            <p style="padding-bottom:10px;position: relative;;" class="homeDesc">Join us on a journey of discovery and growth.
-                <br>
-                Explore,learn and connect with footballers all
-                <br>
-                around the world.
-            </p>
-            <img src="images/homeImage2.JPG" alt="" class="mobileHomeImage1">
-
-            <div class="findOutMoreBtn">
-                <p style="width: fit-content;">Join the journey to becoming a pro!</p>
-            </div>
-
-            <hr>
-            <img src="images/instagram_logo.png" alt="" class="instagram">
-            <img src="images/tiktok.png" alt="" class="tiktok">
-        </div>
+<hr>
+<div class="moreBtn">
+<p style="font-size:18px;">Join the journey to become a pro</p>
+</div>
