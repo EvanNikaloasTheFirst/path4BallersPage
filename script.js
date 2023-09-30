@@ -51,22 +51,27 @@ navBoxElement.addEventListener('click', function() {
 });
 
 function toggleMenu() {
-    // Get the navigation menu element by its ID
+// Toggels the Nav bar 
     var menu = document.querySelector(".line"); 
     var nav = document.querySelector("nav"); 
     var navList = document.querySelector(".navList"); 
     var body = document.querySelector("body"); 
-    
-    // Toggle the visibility of the menu
-  if (navList.style.display === "block") {
-    navList.style.display = "none"; 
-    nav.style.display = "none"; 
-    body.classList.remove("no-scroll"); // Enable scrolling
-  } else {
-    navList.style.display = "block"; 
-    nav.style.display = "block"; 
-    body.classList.add("no-scroll"); // Disable scrolling
-  }
+    var screenWidth = window.innerWidth;
+    const elementToRemove = document.querySelector('.hidden');
+
+if ( screenWidth <= 858 ){
+    if (navList.style.display === "block") {
+        navList.style.display = "none"; 
+        nav.style.display = "none"; 
+        // Remove the "overflow: hidden" CSS property from the document body
+document.body.style.overflow = '';
+
+    } else {
+        navList.style.display = "block"; 
+        nav.style.display = "block"; 
+        document.body.style.overflow = "hidden"; 
+    }
+}
 }
 
 
