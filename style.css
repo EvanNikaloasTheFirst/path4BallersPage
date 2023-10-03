@@ -1,43 +1,66 @@
-<h1 class="testimonialHeader"> Testimonials</h1>
-<h1 class="testimonialSub"> See what they say about us...</h1>
+<div class="testimonials">
 
-
-    <div class="testimonials">
-
-        <div class="testimonialBox">
-        <p>They've helped improve my game so much</p>
-        <hr>
-        <p>Joao Felix</p>
-        <p>FC Barcelona & Portugal</p>
-        </div>
-        <div class="testimonialBox">
-            <p>They've helped improve my game so much</p>
-            <hr>
-            <p>Joao Felix</p>
-            <p>FC Barcelona & Portugal</p>
-            </div>
-            <div class="testimonialBox">
+                <div class="testimonialBox">
                 <p>They've helped improve my game so much</p>
                 <hr>
                 <p>Joao Felix</p>
                 <p>FC Barcelona & Portugal</p>
                 </div>
+
                 <div class="testimonialBox">
                     <p>They've helped improve my game so much</p>
                     <hr>
                     <p>Joao Felix</p>
                     <p>FC Barcelona & Portugal</p>
                     </div>
+
                     <div class="testimonialBox">
                         <p>They've helped improve my game so much</p>
                         <hr>
                         <p>Joao Felix</p>
                         <p>FC Barcelona & Portugal</p>
                         </div>
+
                         <div class="testimonialBox">
                             <p>They've helped improve my game so much</p>
                             <hr>
                             <p>Joao Felix</p>
                             <p>FC Barcelona & Portugal</p>
                             </div>
-      </div>
+            
+                            <div class="testimonialBox">
+                                <p>They've helped improve my game so much</p>
+                                <hr>
+                                <p>Joao Felix</p>
+                                <p>FC Barcelona & Portugal</p>
+                                </div>
+            
+                                <div class="testimonialBox">
+                                    <p>They've helped improve my game so much</p>
+                                    <hr>
+                                    <p>Joao Felix</p>
+                                    <p>FC Barcelona & Portugal</p>
+                                    </div>
+                
+              </div>
+
+
+
+              .testimonials{
+                position: relative;
+                margin-right: 150px;
+                overflow-y:scroll ;
+                bottom: 50px;
+            }
+            
+            .testimonials {
+            display: grid;
+            min-height: fit-content;
+            position: relative;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            font-size: 18px;
+            left: 100px;
+        
+          }
+              
