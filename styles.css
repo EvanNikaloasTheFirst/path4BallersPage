@@ -275,9 +275,9 @@ hr {
 
    }
    .home {
-    padding: 15px;
-    min-width: 100vw;
-    min-height: fit-content;
+
+    max-width: 90%;
+
     max-height: fit-content;
     margin: 0 auto; 
     text-align: center;
