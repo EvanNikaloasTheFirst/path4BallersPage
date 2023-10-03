@@ -276,12 +276,17 @@ hr {
    }
    .home {
     padding: 15px;
+    min-width: 100vw;
     min-height: fit-content;
+    max-height: fit-content;
     margin: 0 auto; 
     text-align: center;
     display: flex;
     justify-content: center; 
     list-style-type: none;
+    left: 25%; 
+    transform: translateX(-25%); 
+
 }
 
 
