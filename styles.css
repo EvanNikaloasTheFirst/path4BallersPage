@@ -518,7 +518,8 @@ min-width: 100%;
 
   .whoAreWe .whoAreWeList{
     display: flex;
-    flex-direction:row;
+         /* rows */
+    flex-direction:column;
     position: relative;
     list-style: none;
     display: flex;
