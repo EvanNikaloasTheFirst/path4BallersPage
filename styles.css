@@ -528,6 +528,7 @@ min-width: 100%;
     box-sizing: border-box;;
       padding-top: 50px;
       margin: 10px;
+      
   }
  
 
@@ -549,15 +550,11 @@ min-width: 100%;
   }
 
 
-  .whoAreWeList2 p{
-    font-size: 18px;
-    padding: 10px;
-  }
 
  
   .whoAreWe p {
     font-weight: 200;
-    font-size: .8rem;
+    font-size: 1rem;
     min-width: fit-content;
     padding-top:50px;
     max-width: 15%;
