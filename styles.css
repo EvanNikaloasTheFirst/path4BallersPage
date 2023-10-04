@@ -253,7 +253,8 @@ hr {
 }
 
 .whatWeDo p{
-  font-size: .9rem;
+  font-size: 1rem;
+  
 }
 
 
@@ -404,11 +405,15 @@ min-width: 100%;
 
     .whatWeDoDiv{
       padding-top: 50px;
-      padding-bottom: 50px;
+      
+
     }
+
+   
 
     .whatWeDoDiv ul li{
         font-size: 24px;
+        
       
     }
     
@@ -416,18 +421,21 @@ min-width: 100%;
       display: flex;
       flex-direction: column;
       margin: 0 auto;
-      padding: 50px;
+      
+
 
     }
 
 
     .whoAreWeDesc li{
       font-size: .8rem;
+      
 
     }
     .whatWeDo {
       padding-top: 10px;
       font-size: .7rem;
+
       
     }
    
@@ -554,7 +562,7 @@ min-width: 100%;
  
   .whoAreWe p {
     font-weight: 200;
-    font-size: 1rem;
+    font-size: 1.3rem;
     min-width: fit-content;
     padding-top:50px;
     max-width: 15%;
