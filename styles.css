@@ -4,9 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 :root{
     --background: linear-gradient(130deg, rgba(0,0,0,1) 6%, rgba(48,47,47,1) 64%, rgba(68,65,65,1) 100%);
-
     --home:linear-gradient(90deg, rgb(58, 58, 58) 6%,
      rgba(48,47,47,1) 64%, rgba(68,65,65,1) 100%);
+
+    --button-gradient: linear-gradient(90deg, rgb(58, 58, 58) 6%, rgba(48, 47, 47, 1) 64%, rgba(68, 65, 65, 1) 100%);
+
     --primary-color:#0F0F0F;
     --secondary-color:#FFFFFF;
     --alternate-color:#9e9d9d;
@@ -53,11 +55,13 @@ body{
     box-sizing: border-box;
     overflow: hidden;
     z-index: 1000;
+
     
 }
 
 .container{
     display: none;
+    
 }
 
 .nav-box{
@@ -65,7 +69,7 @@ body{
     width: 100%;
     min-height:60px;
     max-height: 70px;
-/* From https://css.glass */
+    background-color: var(--secondary-color)
 
 
 
@@ -94,23 +98,24 @@ body{
 
 .navList li:last-child{
     border-radius: 4px;
-    background: var(--secondary-color);
+    background: var(--primary-color);
     border: var(--primary-color);
-    color: var(--primary-color);
+    color: var(--secondary-color);
     position: relative;
     bottom: 30px;
     padding: 10px;
     display: flex; 
     position: absolute;
     right: 0;
-    width: fit-content;
+    font-size: .9rem;
+    text-align: center;
 
 }
 
   
 .navList li{
     margin-right: 30px;
-    color: var(--secondary-color); 
+    color: var(--primary-color); 
     font-weight: 50;
     
     
@@ -118,6 +123,10 @@ body{
 .navList li:hover{
     text-decoration: underline;
     
+}
+
+.logo{
+display: none;
 }
 
 .home-text {
@@ -139,6 +148,9 @@ body{
 .text-content p{
     font-weight: 200;
     font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    max-width: 100%;
+
 }
 
 hr{
@@ -154,7 +166,6 @@ width: 10rem;
 }
 
 .text-content-sub{
-    font-size: 18px;
     color: var(--alternate-color);
     margin-top: 10px;
 }
@@ -163,11 +174,19 @@ width: 10rem;
     background-color: var(--secondary-color);
     border-radius: 4px;
     padding: 15px;
+    max-height: 100px;
     margin-top: 10px;
-    max-width: fit-content; 
+    max-width: 200px;
     position: relative;
     color: var(--primary-color);
+    text-align: center;
 }
+
+.moreBtn p{
+  font-size: .9rem;
+}
+
+
 
 
 
@@ -225,7 +244,7 @@ hr {
 
 
 .whatWeDoDiv ul li{
-  margin-top: 50px;
+  margin-top: 30px;
   flex-direction: column;
   font-size: 1.5rem;
   list-style: none;
@@ -280,10 +299,27 @@ hr {
     transform: translateX(-25%); 
 
 }
-.text-content p{
-    padding-top: 10px;
+
+
+
+.text-content {
+    padding-top: 75px;
     padding-bottom: 10px;
-    font-size: .9rem;
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 25px;
+}
+
+
+
+.moreBtn{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+
+}
+hr{
+display: none;
 }
 
 .iphone {
@@ -300,7 +336,7 @@ min-width: 100%;
     align-items: center;
     position: relative;
     top: 25px;
-    margin: 0 auto; 
+    /* margin: 0 auto;  */
 }
 
 /* .whatWeDo .whoAreWeList{
@@ -510,12 +546,12 @@ min-width: 100%;
     text-align: center;
     min-width: fit-content;
     max-width:100vw;
-    top: 150px;
+    top: 50px;
     color: var(--secondary-color);
-    /* background: linear-gradient(135deg, rgba(0,0,0,1) 6%
-    , rgba(48,47,47,1) 64%, rgba(68,65,65,1) 100%); */
+    background: linear-gradient(135deg, rgba(0,0,0,1) 6%
+    , rgba(48,47,47,1) 64%, rgba(68,65,65,1) 100%);
     margin: 50px;
-    border-radius: 3px;
+    border-radius: 8px;
     list-style-type: none;
 
 } 
@@ -581,14 +617,15 @@ min-width: 100%;
     
 }
 .letsWorkBtn,.workoutBtn{
-    background-color: var(--primary-color);
+    background: var(--button-gradient);
     border-radius: 5px;
     min-width: fit-content;
     max-width: 50px;
     min-height: fit-content;
     max-height: fit-content;
-    padding: 5px;
+    padding: 20px;
     color: var(--secondary-color);
+    border: 2px solid;
     margin-bottom: 10px;
     font-size: var(--text-size);
 }
@@ -698,7 +735,7 @@ min-width: 100%;
     height: 3px;
     width: 100%;
     border-radius: 10px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
   }
 
   .nav-container .hamburger-lines .line1 {
