@@ -28,21 +28,17 @@
     margin: 0;
     padding: 0;
     border: 0;
+    scroll-behavior: smooth;
 }
 body{
-    /* overflow-x: hidden; */
     background: rgb(0,0,0);
     background:var(--background);
     font-family: 'AR One Sans', sans-serif;
-
-    
-    
-
 }
 
 .together{
   max-width: 45%; 
-  /* style="max-width: 65%; min-width: 60%; border-radius: 9px; */
+
 }
 .grid-container {
     display: grid;
@@ -72,8 +68,8 @@ body{
 .nav-box{
     position: relative;
     width: 100%;
-    min-height:90px;
-    max-height: 100px;
+    min-height:60px;
+    max-height: 70px;
     background-color: var(--secondary-color)
 
 
@@ -86,52 +82,22 @@ body{
     list-style: none; 
     padding: 0;
     display: flex; 
-    justify-content:  start;
-    /* background:var(--background); */
+    justify-content:center;
     font-family: 'AR One Sans', sans-serif;
     
   }
 
-.navList li:nth-child(n+1):nth-child(-n+5) {
-    
+.navList li {
     position: relative;
-    bottom: 70px;
+    bottom: 40px;
     font-size: 18px;
-}
-
-
-
-.navList li:last-child{
-    border-radius: 4px;
-    background: var(--primary-color);
-    border: var(--primary-color);
-    color: var(--secondary-color);
-    position: relative;
-    bottom: 60px;
-    padding: 10px;
-    display: flex; 
-    position: absolute;
-    right: 0;
-    font-size: .9rem;
-    text-align: center;
-
-}
-
-  
-.navList li{
     margin-right: 30px;
-    color: var(--primary-color); 
+
     font-weight: 50;
-    
     
 }
 .navList li:hover{
     text-decoration: underline;
-    
-}
-
-.logo{
-display: none;
 }
 
 .home,
@@ -149,6 +115,7 @@ display: none;
     align-items: center;
     max-width: 70%;
     color: #FFFFFF;
+    padding-top: 50px;
 }
 
 .text-content {
@@ -156,6 +123,10 @@ display: none;
     position: relative;
     flex: 1;
     left: 25%;
+}
+
+.text-content h1{
+  font-size: 54px;
 }
 
 .text-content p{
@@ -173,10 +144,11 @@ hr{
 width: 10rem;
 }
 
-.iphone{
+.homeimage{
     position: relative;
-    left: 15%;
-    top: 20px;
+    left: 25%;
+    max-width: 55%;
+    border-radius: 25px;
 
 
 }
@@ -203,11 +175,6 @@ width: 10rem;
   color: var(--primary-color);
   font-weight: 500;
 }
-
-
-
-
-
 .moreBtn:hover{
     box-shadow: rgba(251, 251, 251, 0.35) 0px 5px 15px;
 }
@@ -229,12 +196,6 @@ p {
     font-weight: 100;
 }
 
-hr {
-    border: none;
-    border-top: 1px solid var(--secondary-color);
-    margin: 50px 0;
-    max-width: 100%;
-}
 
 .findOutMoreBtn{
     background-color: var(--secondary-color);
@@ -246,7 +207,8 @@ hr {
     padding: 10px;  
 }
 
-.followUsBtn p {
+.followUsBtn p ,
+.findOutMoreBtn p{
     position: relative;
     font-size: var(--small-size);
     top: 5px;
@@ -255,21 +217,11 @@ hr {
     padding: 12px;
     border-radius: 10px;
 }
-.findOutMoreBtn p{
-    color: var(--primary-color);
-    font-size: var(--small-size);
-}
 .whatWeDoDiv{
   position: relative;
   top: 125px;
 }
-
-.whatWeDoDiv h1{
-  color: var(--alternate-color);
-  
-}
 .whatWeDoDiv ul {
-
   display: flex;
   width: 100vw;
 }
@@ -278,18 +230,14 @@ hr {
 .whatWeDoDiv ul li{
   margin-top: 30px;
   flex-direction: row;
-  font-size: 2rem;
+  font-size: 1.6rem;
   list-style: none;
   color: var(--secondary-color);
   text-align: center;
   padding: 30px;
-
 }
-
-
 .whatWeDoDiv h1{
   margin: 0 auto;
-  font-size: 10rem;
   text-align: center;
   color: var(--secondary-color);
 
@@ -297,25 +245,22 @@ hr {
 
 .whatWeDo{
   display: flex;
-  justify-content: space-evenly; /* Center horizontally */
-  width: 100vw; /* Set your desired width */
-  margin: 0 auto; /* Center horizontally using auto margins */
+  justify-content: space-evenly;
+  width: 100vw; 
+  margin: 0 auto; 
   list-style: none;
 
 }
-
 .whatWeDo p{
   font-size: 1rem;
   
 }
 
-.whatWeDo h1{
-  font-size: 90rem;
-}
 
 .whatWeDoDivImg{
+  min-width: 20vw;
   max-width: 25vw;
-  border-radius: 8px;
+  border-radius: 18px;
   padding: 10px;
 }
 
@@ -370,16 +315,13 @@ hr {
   margin-bottom: 20px;
 
 }
-hr{
-display: none;
 
-}
 
-.iphone {
+.homeimage {
     margin: 0 auto; 
 position: relative;
 left: 25%;
-min-width: 100%;
+max-width: 90%;
 
 }
 
@@ -389,7 +331,6 @@ min-width: 100%;
     align-items: center;
     position: relative;
     top: 25px;
-    /* margin: 0 auto;  */
 }
 
   hr{
@@ -421,26 +362,36 @@ min-width: 100%;
 }
     .navList{
         display: none;
-        position: relative;
         background-color: var(--primary-color);
         min-width: fit-content;
         min-height: 100vh;
         max-height: 100vh;
-        margin: 0 auto; 
         text-align: center;
+        animation: fadeIn 1s forwards; 
         position: relative;
-        animation: fadeIn 1s forwards; /* Use 'forwards' to keep the final state after animation */
-        padding-top:75px;
+        left:10px;
+
+
     }
 
-    .navList li{
-        font-size: 32px;
-        padding-top:50px;
+    .navList li a{
+        top: 100px;
+        font-size: 25px;
+        padding-top:150px;
         color: var(--secondary-color);
         font-weight: 500;
         opacity: 0;
         animation: fadeIn 1s forwards; 
+        
+
     }
+
+ /* Add margin between list items */
+.navList li {
+  margin-bottom: 100px; /* Adjust the value as needed for your desired spacing */
+}
+
+
 
     .navList li:nth-child(1)  {
         animation-delay: 0.2s;
@@ -465,17 +416,6 @@ min-width: 100%;
       }
 
 
-    .navList li:last-child{
-        position: relative;
-        top: 5px;
-        padding: 10px;
-        background-color: var(--secondary-color);
-        width: fit-content;
-        left: 48%; 
-        transform: translateX(-50%); 
-        color: var(--primary-color);
-    }
-
 
     .whatWeDoDiv{
       padding-top: 50px;
@@ -496,8 +436,13 @@ min-width: 100%;
 
     }
 
-
+.whoAreWeList{
+  top: 100px;
+}
    
+.descTitle{
+  font-size: 48px;
+}
 
    
     
@@ -561,8 +506,6 @@ min-width: 100%;
         margin: 0 auto;
 
     }
-
-      
       /* end of mobile */
 }
 
@@ -576,18 +519,11 @@ min-width: 100%;
     max-width:100vw;
     top: 50px;
     color: var(--secondary-color);
-    /* background: linear-gradient(135deg, rgba(0,0,0,1) 6%
-    , rgba(48,47,47,1) 64%, rgba(68,65,65,1) 100%); */
     margin: 50px;
     border-radius: 8px;
     list-style-type: none;
 
 } 
-  /* here */
-
-
-  
-
   .whoAreWe .whoAreWeList{
     display: flex;
     flex-direction:column;
@@ -604,25 +540,25 @@ min-width: 100%;
       
   }
 
-.whoAreWeList ul li {
+.whoAreWeList p {
     padding-bottom: 100px;
-
   }
-  /* <img src="images/together.JPG" alt=""  class="together" "> */
+
+  .whoAreWeList h1{
+    padding-bottom: 25px;
+  }
 
 
   .whoAreWe .descTitle  {
-    font-size: 2rem;
+    font-size: 55px;
     position: relative;
-   top:45px;
-    max-width: 100%;
+top: 25px;
     font-weight: bold;
     background-image: radial-gradient(circle,
     rgba(255, 255, 255, 1), 
     rgb(163, 161, 161), 
     rgb(165, 163, 163) 
   );
-  /* bottom: 30px; */
   -webkit-background-clip: text; /* For WebKit browsers */
   background-clip: text;
   color: transparent;
@@ -638,7 +574,6 @@ min-width: 100%;
     padding-top:20px;
     max-width: 15%;
     text-align: center;
-    /* padding-left: 10%; */
   }
 
 .whoAreWeDesc{
@@ -674,7 +609,7 @@ min-width: 100%;
 
 /* Testimonials */
 
-.testimonialHeader{
+.trainingHeader{
     font-size: var(--subheader-size);
     position: relative;
     justify-content: center;
@@ -685,7 +620,7 @@ min-width: 100%;
 }
 
 
-  .testimonials p,.testimonials h1 {
+  .trainingHeader p,.trainingHeader h1 {
     font-size: .8rem;
     position: relative;
     justify-content: center;
@@ -742,76 +677,8 @@ min-width: 100%;
     position: relative;
     top: 15px;
   }
-.checkbox {
-    position: absolute;
-    display: block;
-    height: 32px;
-    width: 32px;
-    top: 25px;
-    left: 20px;
-    z-index: 5;
-    opacity: 0;
-    cursor: pointer;
-    
-  }
 
-  .hamburger-lines {
-
-    display: block;
-    height: 14px;
-    width: 30px;
-    position: absolute;
-    top: 17px;
-    left: 20px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
  
-  }
-
-  .hamburger-lines .line {
-    display: block;
-    height: 3px;
-    width: 100%;
-    border-radius: 10px;
-    background-color: var(--primary-color);
-  }
-
-  .nav-container .hamburger-lines .line1 {
-    transform-origin: 0% 0%;
-    transition: transform 0.4s ease-in-out;
-  }
-  
-  .nav-container .hamburger-lines .line2 {
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .nav-container .hamburger-lines .line3 {
-    transform-origin: 0% 100%;
-    transition: transform 0.4s ease-in-out;
-  }
-
-  .nav-container input[type="checkbox"]:checked ~ .menu-items {
-    transform: translateX(0);
-  }
-  
-  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-    transform: rotate(45deg);
-  }
-  
-  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
-    transform: scaleY(0);
-  }
-  
-  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-    transform: rotate(-45deg);
-  }
-  
-  .nav-container input[type="checkbox"]:checked ~ .logo{
-    display: none;
-  }
-
 
 /* Animations */
   @keyframes fadeIn {
@@ -824,4 +691,11 @@ min-width: 100%;
     to {
         opacity: 1; /* Fade in to full opacity */
     }
+}
+
+
+a:any-link{
+  color: var(--primary-color);
+  text-decoration: none;
+
 }
