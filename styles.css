@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital@1&display=swap');
 :root{
     --background: linear-gradient(130deg, rgba(0,0,0,1) 6%, rgba(48,47,47,1) 64%, rgba(68,65,65,1) 100%);
     --home:linear-gradient(90deg, rgb(58, 58, 58) 6%,
@@ -127,6 +128,8 @@ body{
 
 .text-content h1{
   font-size: 54px;
+  font-family: 'Overpass', sans-serif;
+
 }
 
 .text-content p{
@@ -155,7 +158,6 @@ width: 10rem;
 
 .text-content-sub{
     color: var(--alternate-color);
-    margin-top: 10px;
 }
 
 .moreBtn{
@@ -237,8 +239,11 @@ p {
   padding: 30px;
 }
 .whatWeDoDiv h1{
+  font-family: 'Overpass', sans-serif;
   margin: 0 auto;
   text-align: center;
+  font-size: 1.8rem;
+  padding-bottom: 100px;
   color: var(--secondary-color);
 
 }
@@ -249,6 +254,7 @@ p {
   width: 100vw; 
   margin: 0 auto; 
   list-style: none;
+  padding-bottom: 100px;
 
 }
 .whatWeDo p{
@@ -426,6 +432,7 @@ max-width: 90%;
       width: 100vw;
     }
     
+
     
     .whatWeDoDiv ul{
       display: flex;
@@ -442,6 +449,8 @@ max-width: 90%;
    
 .descTitle{
   font-size: 48px;
+  padding-top: 75px;
+
 }
 
    
@@ -545,14 +554,14 @@ max-width: 90%;
   }
 
   .whoAreWeList h1{
+    font-family: 'Overpass', sans-serif;
     padding-bottom: 25px;
   }
 
 
-  .whoAreWe .descTitle  {
+  .whoAreWe .descTitle h1 {
     font-size: 55px;
     position: relative;
-top: 25px;
     font-weight: bold;
     background-image: radial-gradient(circle,
     rgba(255, 255, 255, 1), 
@@ -621,6 +630,7 @@ top: 25px;
 
 
   .trainingHeader p,.trainingHeader h1 {
+    font-family: 'Overpass', sans-serif;
     font-size: .8rem;
     position: relative;
     justify-content: center;
