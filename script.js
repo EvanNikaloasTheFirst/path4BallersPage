@@ -8,15 +8,6 @@ navBoxElement.addEventListener('click', function() {
     // You can replace this alert with any other JavaScript code you want to execute.
 });
 
-var check = document.querySelector(".nav-box"); 
-
-check.addEventListener('click', function() {
-    // Your code to run when the element is clicked
-    alert('Navigation menu clicked');
- 
-    // You can replace this alert with any other JavaScript code you want to execute.
-});
-
 function toggleMenu(event) {
   var menu = document.querySelector(".navicon");
 
@@ -25,16 +16,19 @@ function toggleMenu(event) {
   var menuLinks = navList.querySelectorAll('a');
   var screenWidth = window.innerWidth;
 
+  var icon = document.querySelector(".navicon");
+
   if (screenWidth < 850) {
     menu.addEventListener('click', function() {
         
         if (navList.style.display === "block") {
             navList.style.display = "none";
-
             document.documentElement.style.overflow = 'auto';
             document.documentElement.style.overflowX = 'auto';
         } else {
             navList.style.display = "block";
+            icon.style.borderRadius = "5px";
+            icon.style.backgroundColor = "red;"
             document.documentElement.style.overflow = 'hidden';
             document.documentElement.style.overflowX = 'hidden';
 
