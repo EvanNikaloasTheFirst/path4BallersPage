@@ -7,68 +7,70 @@
     <script src="script.js"></script>
     
     <title>Document</title>
+     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
 </head>
 <body onload="monitorWindowSize()">
     <div class="nav-box" onclick="toggleMenu();">
-        <div class="container nav-container" id="home">
-    <img src="images/iconMenu.png" alt="" style="max-width: 50px;
-    position: relative;
-    bottom: 5px;" class="navicon">
-
-        </div>
+        
     </div>
-    <nav>
-
-            <ul class="navList">
-
-
-                <li><a href="#home">Home</a>
-                </li>
-                <li><a href="#whatWeDoDiv">What we do</a></li>
-                <li>
-                    <a href="#whoAreWe">Who we are</a>
-                </li>
-                <li>
-                    <a href="https://www.tiktok.com/@path4ballers/playlist/Free%20football%20sessions%20%F0%9F%83%8F-7283069554354670369?_d=secCgYIASAHKAESPgo8VkQZ3o5pGQBx2kHPf%2FvYj8KL7RvHmxKZSrpk4YHBeM8N3YhTF8GiahwOFzrjXOc3FD2HrS37EV3A8Iw%2BGgA%3D&_r=1&checksum=81713b75e5daa848d8a39dbf3cdcc1ce755264e346d28721b6e4b47d82f042a7&language=en&sec_user_id=MS4wLjABAAAAUgrU0Eo6UU6ECo-cwE8lu70D5qLHdPZse4jNrW7oosoBgjVYZ67wG6nzvE14Ne9H&share_app_id=1233&share_link_id=10628987-2065-4890-AC5E-EA9B4B043C63&social_share_type=16&timestamp=1695818551&tt_from=copy&u_code=dlde8gkc2la5f5&ug_btm=b8727%2Cb2878&user_id=7025662048345244677&utm_campaign=client_share&utm_medium=ios&utm_source=copy">Sessions</a>
-                </li>
-                <li> <a href="#Training">Training</a></li>
-                
-
-            </ul> 
-
-    </nav>
+    <nav class="navbar navbar-expand-lg
+    bg-custom">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#WhatWeDoDiv">What we do</a></li>
+              <li class="nav-item"><a class="nav-link" href="#WhoAreWe">What are we</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://www.tiktok.com/@path4ballers/playlist/Free%20football%20sessions%20%F0%9F%83%8F-7283069554354670369?_d=secCgYIASAHKAESPgo8VkQZ3o5pGQBx2kHPf%2FvYj8KL7RvHmxKZSrpk4YHBeM8N3YhTF8GiahwOFzrjXOc3FD2HrS37EV3A8Iw%2BGgA%3D&_r=1&checksum=81713b75e5daa848d8a39dbf3cdcc1ce755264e346d28721b6e4b47d82f042a7&language=en&sec_user_id=MS4wLjABAAAAUgrU0Eo6UU6ECo-cwE8lu70D5qLHdPZse4jNrW7oosoBgjVYZ67wG6nzvE14Ne9H&share_app_id=1233&share_link_id=10628987-2065-4890-AC5E-EA9B4B043C63&social_share_type=16&timestamp=1695818551&tt_from=copy&u_code=dlde8gkc2la5f5&ug_btm=b8727%2Cb2878&user_id=7025662048345244677&utm_campaign=client_share&utm_medium=ios&utm_source=copy">Sessions</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Training">Training</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Social
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://www.instagram.com/path4ballers/">Instagram</a></li>
+                  <li><a class="dropdown-item" href="https://www.linkedin.com/company/path4ballers?originalSubdomain=uk">LinkedIn</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Email</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
         <main>
             <div class="grid-container">
-            
         <div class="home">
             <div class="home-text">
                 <div class="text-content">
                 <h1>We’re here to 
-                    <br>improve you. <br> That's our mission. </h1>
+                    <br> <span>improve</span> you. <br> That's our <span>
+                        mission.</span></h1>
                     <br>
-                    <p style="max-width:80vw;">At P4B, we're more than just a platform for footballers. We're a launchpad for ballers from all backgrounds to,
-                        not only elevate their game on the pitch but also develop as individuals.</p>
+                    <p style="max-width:80vw;">At P4B, we're more than just a platform.
                         <a href="https://www.instagram.com/path4ballers/">
                 <div class="moreBtn">
                     <p>Find out more.</p>
                     </div>
                     Who we are</a>
                     <hr>
-                    <p class="text-content-sub" style="font-size: 1rem;">
-
-                        <span style="font-weight: bold;">19,000+</span> <br> Followers on all platforms.
+                    <p class="text-content-sub" style="font-size: .7rem;">
+                        <span style="font-weight: bold; color: white; font-size: 1rem;">19,000+  </span>  followers on all platforms.
+                      
                       </p>
                       <br>
                 </div>
-                <img src="images/homeImage2.JPG" alt=""  class="homeimage">
+                <img src="images/logo.png" alt=""  class="homeimage">
 
                 
         </div>
         </div>
-        <hr style="display: flex;
-        justify-content: center;  margin: 0 auto; width: 90%;
-">
-
         <div class="whatWeDoDiv" id="whatWeDoDiv">
             <h1 >The services we provide</h1> 
             <ul class="whatWeDo">
@@ -94,7 +96,7 @@
 
 
         <div class="whoAreWe" id="whoAreWe">
-            <div class="descTitle"><h1>You potential is beyond 
+            <div class="descTitle"><h1>Your potential is beyond 
                 your imagination.</h1>
                 
             </div>
@@ -140,7 +142,7 @@
         <h1 class="trainingHeader"> Start training today</h1>
         <div class="training" id="Training">
             <div class="subTrainBox1">
-                <img src="images/workout.png" alt="">
+                <img src="images/workout.png" alt="" class="iphone">
                 <ul>
                     <li><h2>Player specific sessions, for you</h2></li>
                     <li><p>Select a wide range of sessions to target your strengths and weaknesses.</p></li>
@@ -156,7 +158,7 @@
             <br>
 
             <div class="subTrainBox2">
-                <img src="images/technical.png" alt="">
+                <img src="images/technical.png" alt="" class="iphone">
                 <ul>
                     <li><h2>Position specific workouts</h2></li>
                     <li><p>We know the game is constantly evolving,
@@ -172,6 +174,8 @@
         </div>
         </main>
     
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html> 
 
