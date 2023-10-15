@@ -59,6 +59,18 @@ span{
 .bg-custom{
   background-color: white;
 }
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+}
+
+li.nav-item.dropdown {
+  position: relative;
+  top: 5px;
+}
+
 
 
 .home,
@@ -76,7 +88,7 @@ span{
     align-items: center;
     max-width: 70%;
     color: #FFFFFF;
-    padding-top: 50px;
+
 }
 
 .text-content {
