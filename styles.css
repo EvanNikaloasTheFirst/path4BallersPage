@@ -35,7 +35,9 @@ body{
     background: rgb(0,0,0);
     background:var(--background);
     font-family: 'AR One Sans', sans-serif;
-}
+    overflow-x: hidden;
+
+  }
 
 span{
   color: var(--alternate-color);
@@ -90,7 +92,7 @@ li.nav-item.dropdown {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    max-width: 70%;
+    max-width: 80%;
     color: #FFFFFF;
 
 }
@@ -99,14 +101,14 @@ li.nav-item.dropdown {
     width: 100%;
     position: relative;
     flex: 1;
-    left: 25%;
+    left: 15%;
 }
 
 
 
 .text-content h1{
   font-weight:50;
-  font-size: 54px;
+  font-size: 68px;
   font-family: 'Overpass', sans-serif;
 
 }
@@ -249,6 +251,15 @@ p {
   padding: 10px;
 }
 
+.footer{
+  min-width: 100vw;
+  background-color: var(--secondary-color);
+  text-align: center;
+  justify-content: center;
+}
+
+
+
 /* Mobile / Tablet */
 @media (max-width: 858px) {
   .whatWeDoDiv,
@@ -264,7 +275,7 @@ p {
 
   .letsWorkBtn{
     position: relative;
-    left: 20px;
+    left: 15px;
   }
   .whatWeDoDivImg{
     max-width:80vw;
@@ -280,6 +291,11 @@ p {
     
 
    }
+
+   .text-content {
+
+    left: 25%;
+}
    .home {
     max-width: 90%;
     max-height: fit-content;
