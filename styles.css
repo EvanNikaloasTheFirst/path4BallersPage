@@ -492,7 +492,7 @@ max-width: 90%;
     .workoutBtn {
         top: 25px;
         margin-bottom: 25px;
-        width: fit-content; 
+        width: 125px; 
         font-size: 18px;padding: 10px;
         display: flex;
         position: relative;
