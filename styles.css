@@ -212,7 +212,7 @@ top: 100px;
 }
 .whatWeDoDiv ul {
   display: flex;
-  width: 100vw;
+  width: 85vw;
   padding-top: 100px;
 }
 
@@ -223,13 +223,12 @@ top: 100px;
   list-style: none;
   color: var(--secondary-color);
   text-align: center;
-  padding: 30px;
+
 }
 .whatWeDoDiv h1{
   font-family: 'Overpass', sans-serif;
   margin: 0 auto;
   text-align: center;
-
    padding-top: 25px; 
   color: var(--secondary-color); 
 
@@ -237,11 +236,12 @@ top: 100px;
 
 .whatWeDo{
   display: flex;
-  justify-content: space-evenly;
-  width: 100vw; 
+  justify-content: space-between;
   margin: 0 auto; 
   list-style: none;
   padding-bottom: 100px;
+  position: relative;
+  /* right: 10px; */
 
 }
 .whatWeDo p{
@@ -249,9 +249,6 @@ top: 100px;
   
 }
 
-.whoAreWe{
-  padding-top: 100px;
-}
 
 
 .whatWeDoDivImg{
@@ -260,7 +257,6 @@ top: 100px;
   border-radius: 18px;
   padding: 10px;
 }
-
 
 
 .footerBox{
@@ -482,7 +478,10 @@ max-width: 90%;
         text-align: center; 
 
     }
-
+.subTrainBox1 ul,
+.subTrainBox2 ul {
+list-style: none;
+}
 .training .subTrainBox1 ul li,
 .training .subTrainBox2 ul li{
   padding: 10px;
@@ -584,9 +583,6 @@ max-width: 90%;
     background: var(--button-gradient);
     border-radius: 5px;
     min-width: fit-content;
-    max-width: 50px;
-    min-height: fit-content;
-    max-height: fit-content;
     padding: 20px;
     color: var(--secondary-color);
     border: 2px solid;
@@ -627,6 +623,8 @@ max-width: 90%;
     align-items: center;
     color: #FFFFFF;
     margin: 0 auto;
+    position: relative;
+    left: 5px;
 
 }
 .subTrainBox2{
