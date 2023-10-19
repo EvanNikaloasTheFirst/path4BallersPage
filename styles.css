@@ -2,11 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital@1&display=swap');
 :root{
     --background: linear-gradient(130deg, rgba(0,0,0,1) 6%, rgba(48,47,47,1) 64%, rgba(68,65,65,1) 100%);
-
     --home:linear-gradient(90deg, rgb(58, 58, 58) 6%,
      rgba(48,47,47,1) 64%, rgba(68,65,65,1) 100%);
+
+    --button-gradient: linear-gradient(90deg, rgb(58, 58, 58) 6%, rgba(48, 47, 47, 1) 64%, rgba(68, 65, 65, 1) 100%);
+
     --primary-color:#0F0F0F;
     --secondary-color:#FFFFFF;
     --alternate-color:#9e9d9d;
@@ -26,15 +29,22 @@
     margin: 0;
     padding: 0;
     border: 0;
+    scroll-behavior: smooth;
 }
 body{
-    /* overflow-x: hidden; */
     background: rgb(0,0,0);
     background:var(--background);
     font-family: 'AR One Sans', sans-serif;
+    overflow-x: hidden;
 
-    
-    
+  }
+
+span{
+  color: var(--alternate-color);
+}
+
+.together{
+  max-width: 45%; 
 
 }
 .grid-container {
@@ -47,77 +57,36 @@ body{
 
 }
 
-.nav{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-    z-index: 1000;
-    
-}
-
-.container{
-    display: none;
-}
-
-.nav-box{
-    position: relative;
-    width: 100%;
-    min-height:60px;
-    max-height: 70px;
-/* From https://css.glass */
-
-
+/* Nav bar */
+.bg-custom{
+  background-color: white;
 
 }
 
-.navList {
-    margin-left: 20px;
-    position: relative;
-    list-style: none; 
-    padding: 0;
-    display: flex; 
-    justify-content:  start;
-    /* background:var(--background); */
-    font-family: 'AR One Sans', sans-serif;
-    
-  }
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+}
 
-.navList li:nth-child(n+1):nth-child(-n+5) {
-    
-    position: relative;
-    bottom: 40px;
-    font-size: 18px;
+li.nav-item.dropdown {
+  position: relative;
+  top: 5px;
+}
+
+.nav-item li:hover{
+  text-decoration: underline;
+  color: var(--primary-color);
 }
 
 
-
-.navList li:last-child{
-    border-radius: 4px;
-    background: var(--secondary-color);
-    border: var(--primary-color);
-    color: var(--primary-color);
-    position: relative;
-    bottom: 30px;
-    padding: 10px;
-    display: flex; 
-    position: absolute;
-    right: 0;
-    width: fit-content;
-
-}
-
-  
-.navList li{
-    margin-right: 30px;
-    color: var(--secondary-color); 
-    font-weight: 50;
-    
-    
-}
-.navList li:hover{
-    text-decoration: underline;
-    
+.home,
+.whatWeDoDiv,
+.whoAreWe,
+.training
+{
+  min-height: 100vh;
 }
 
 .home-text {
@@ -125,53 +94,77 @@ body{
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    max-width: 70%;
+    max-width: 80%;
     color: #FFFFFF;
+
 }
 
 .text-content {
     width: 100%;
     position: relative;
     flex: 1;
-    left: 25%;
+    left: 15%;
+}
+
+
+
+.text-content h1{
+  font-weight:50;
+  font-size: 68px;
+  font-family: 'Overpass', sans-serif;
+
 }
 
 .text-content p{
-    font-weight: 200;
+
     font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    max-width: 100vw;
+    color: var(--secondary-color);
+
 }
+
+
 
 hr{
 width: 10rem;
 }
 
-.iphone{
+.homeimage{
     position: relative;
-    left: 15%;
-    top: 20px;
+    left: 16%;
+    top: 25px;
+    max-width: 55%;
+    border-radius: 25px;
 
 
 }
 
 .text-content-sub{
-    font-size: 18px;
     color: var(--alternate-color);
-    margin-top: 10px;
 }
 
 .moreBtn{
     background-color: var(--secondary-color);
     border-radius: 4px;
-    padding: 15px;
-    margin-top: 10px;
-    max-width: fit-content; 
+    padding: 10px;
+    max-height: 100px;
+    max-width: 250px;
     position: relative;
     color: var(--primary-color);
+    text-align: center;
 }
 
-
-
-.moreBtn:hover{
+.moreBtn p{
+  font-size: .9rem;
+  color: var(--primary-color);
+  font-weight: 1000;
+  margin: 0 auto;
+}
+.moreBtn:hover,
+.workoutBtn:hover,
+.letsWorkBtn:hover
+{
     box-shadow: rgba(251, 251, 251, 0.35) 0px 5px 15px;
 }
 
@@ -192,12 +185,6 @@ p {
     font-weight: 100;
 }
 
-hr {
-    border: none;
-    border-top: 1px solid var(--secondary-color);
-    margin: 50px 0;
-    max-width: 100%;
-}
 
 .findOutMoreBtn{
     background-color: var(--secondary-color);
@@ -209,7 +196,8 @@ hr {
     padding: 10px;  
 }
 
-.followUsBtn p {
+.followUsBtn p ,
+.findOutMoreBtn p{
     position: relative;
     font-size: var(--small-size);
     top: 5px;
@@ -218,56 +206,112 @@ hr {
     padding: 12px;
     border-radius: 10px;
 }
-.findOutMoreBtn p{
-    color: var(--primary-color);
-    font-size: var(--small-size);
+.whatWeDoDiv{
+  position: relative;
+top: 100px;
+}
+.whatWeDoDiv ul {
+  display: flex;
+  width: 85vw;
+  padding-top: 100px;
 }
 
 
 .whatWeDoDiv ul li{
-  margin-top: 50px;
-  flex-direction: column;
-  font-size: 1.5rem;
+  flex-direction: row;
+  font-size: 1.6rem;
   list-style: none;
-  padding: 50px;
-
-}
-.whatWeDoDiv ul{
-    color: var(--secondary-color);
-    text-align: center;
-}
-
-.whatWeDoDiv h1{
-  margin: 0 auto;
-  width: 100vw;
-  text-align: center;
   color: var(--secondary-color);
-    padding-bottom: 65px;
+  text-align: center;
+
+}
+.whatWeDoDiv h1{
+  font-family: 'Overpass', sans-serif;
+  margin: 0 auto;
+  text-align: center;
+   padding-top: 25px; 
+  color: var(--secondary-color); 
+
 }
 
 .whatWeDo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 15px;
-}
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto; 
+  list-style: none;
+  padding-bottom: 100px;
+  position: relative;
+  /* right: 10px; */
 
+}
 .whatWeDo p{
   font-size: 1rem;
   
 }
 
 
+
+.whatWeDoDivImg{
+  min-width: 20vw;
+  max-width: 25vw;
+  border-radius: 18px;
+  padding: 10px;
+}
+
+
+.footerBox{
+  min-width: 100vw;
+  background-color: var(--secondary-color);
+  text-align: center;
+  justify-content: center;
+}
+
+
+.footerBox p
+ {
+  display: block;
+  font-size: 18px;
+  padding: 0;
+}
+
+
+
+
 /* Mobile / Tablet */
 @media (max-width: 858px) {
+  .whatWeDoDiv,
+  .whoAreWe,
+  .training{
+    position: relative;
+    right: 25px;
+  }
+  .iphone{
+    position: relative;
+    left: 22px;
+  }
 
+  .letsWorkBtn{
+    position: relative;
+    left: 15px;
+  }
+  .whatWeDoDivImg{
+    max-width:80vw;
+  }
   
+  .together{
+    max-width: 100%; 
 
+  }
  
    body, .grid-container{
     overflow-x: hidden;
+    
 
    }
+
+   .text-content {
+    left: 25%;
+}
    .home {
     max-width: 90%;
     max-height: fit-content;
@@ -280,17 +324,38 @@ hr {
     transform: translateX(-25%); 
 
 }
-.text-content p{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: .9rem;
+
+
+
+.text-content {
+    padding-top: 60px;
+
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 25px;
+    width: 100vw;
 }
 
-.iphone {
+.text-content h1{
+  padding-bottom: 15px;
+  font-weight: 700;
+}
+
+
+
+.moreBtn{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+
+}
+
+
+.homeimage {
     margin: 0 auto; 
 position: relative;
 left: 25%;
-min-width: 100%;
+max-width: 90%;
 
 }
 
@@ -300,146 +365,73 @@ min-width: 100%;
     align-items: center;
     position: relative;
     top: 25px;
-    margin: 0 auto; 
 }
 
-/* .whatWeDo .whoAreWeList{
-    display: flex;
-    justify-content: center; 
-    flex-direction: column;
-    list-style-type: none;
-    margin-top: 100px;
-    margin: 0 auto; 
-  }
-
-  .whatWeDo li{
-    padding: 25px;
-  } */
-
-  hr{
-    position: relative;
-    width: 70%;
-    margin: 0 auto;
-    top: 10px;
-  }
 .container{
     display: block;
 }
 
-.iphone{
-    position: relative;
-    max-width:350px;
-}
-
-
-
 .home-text {
     flex-grow: 1;
     flex-direction: column;
-    top: 100px;
-    max-width: 100px;
     max-width: 100%;
 
 
   
 }
-    .navList{
-        display: none;
-        position: relative;
-        background-color: var(--primary-color);
-        min-width: fit-content;
-        min-height: 100vh;
-        max-height: 100vh;
-        margin: 0 auto; 
-        text-align: center;
-        position: relative;
-        left: 65%; 
-        transform: translateX(-60%); 
-        animation: fadeIn 1s forwards; /* Use 'forwards' to keep the final state after animation */
-        padding-top:75px;
-    }
 
-    .navList li{
-        font-size: 32px;
-        padding-top:50px;
-        color: var(--secondary-color);
-        font-weight: 500;
-        opacity: 0;
-        animation: fadeIn 1s forwards; 
-    }
-
-    .navList li:nth-child(1)  {
-        animation-delay: 0.2s;
-      }
-      .navList li:nth-child(2)  {
-        animation-delay: 0.55s;
-      }
-      .navList li:nth-child(3)  {
-        animation-delay: 0.85s;
-      }
-      .navList li:nth-child(4)  {
-        animation-delay: 1.15s;
-      }
-      .navList li:nth-child(5)  {
-        animation-delay: 1.45s;
-      }
-      .navList li:nth-child(6)  {
-        animation-delay: 1.75s;
-      }
-      .navList li:nth-child(7)  {
-        animation-delay:2s;
-      }
+ /* Add margin between list items */ 
+ .navList li {
+  margin-bottom: 100px; /* Adjust the value as needed for your desired spacing */
+ } 
 
 
-    .navList li:last-child{
-        position: relative;
-        top: 5px;
-        padding: 10px;
-        background-color: var(--secondary-color);
-        width: fit-content;
-        left: 48%; 
-        transform: translateX(-50%); 
-        color: var(--primary-color);
-    }
+
+
 
 
     .whatWeDoDiv{
       padding-top: 50px;
-      
+    }
+    .whatWeDoDiv ul {
+
+      display: flex;
+      width: 100vw;
 
     }
+    
 
-   
-
-    .whatWeDoDiv ul li{
-        font-size: 24px;
-        
-      
-    }
     
     .whatWeDoDiv ul{
       display: flex;
       flex-direction: column;
-      margin: 0 auto;
+
       
 
 
     }
 
-
-    .whoAreWeDesc li{
-      font-size: .8rem;
-      
-
+    .homeimage{
+      padding-bottom: 125px;
+      width: 100vw;
     }
-    .whatWeDo {
-      padding-top: 10px;
-      font-size: .7rem;
 
-      
-    }
+.whoAreWeList{
+  top: 100px;
+}
+
+.whoAreWe ul li p{
+  font-size: 1.5rem;
+}
    
-    
+.descTitle h1,
+.whatWeDoDiv h1{
+  position: relative;
+  font-size: 45px;
+  top: 75px;
+  left: 12px;
+
+}
     .findOutMoreBtn{
         position: relative;
         background-color: var(--secondary-color);
@@ -462,11 +454,17 @@ min-width: 100%;
         padding: 15px;
     }
 
+    .whoAreWeList{
+      width: 100vw;
+    }
+
+   
     .training .subTrainBox1,
     .training .subTrainBox2{
         display: flex;
         flex-direction: column; 
         text-align: center; 
+
     }
 
     .training .subTrainBox1 ul, .training .subTrainBox2 ul{
@@ -480,7 +478,10 @@ min-width: 100%;
         text-align: center; 
 
     }
-
+.subTrainBox1 ul,
+.subTrainBox2 ul {
+list-style: none;
+}
 .training .subTrainBox1 ul li,
 .training .subTrainBox2 ul li{
   padding: 10px;
@@ -497,8 +498,6 @@ min-width: 100%;
         margin: 0 auto;
 
     }
-
-      
       /* end of mobile */
 }
 
@@ -510,41 +509,40 @@ min-width: 100%;
     text-align: center;
     min-width: fit-content;
     max-width:100vw;
-    top: 150px;
+    top: 50px;
     color: var(--secondary-color);
-    background: linear-gradient(135deg, rgba(0,0,0,1) 6%
-    , rgba(48,47,47,1) 64%, rgba(68,65,65,1) 100%);
     margin: 50px;
-    border-radius: 3px;
+    border-radius: 8px;
     list-style-type: none;
 
 } 
-  /* here */
-
-
-  
-
   .whoAreWe .whoAreWeList{
     display: flex;
-         /* rows */
     flex-direction:column;
     position: relative;
     list-style: none;
-    display: flex;
     align-items: center;
     justify-content: space-evenly; 
-    box-sizing: border-box;;
+
       padding-top: 50px;
-      margin: 10px;
+      width: 90vw;
+
       
   }
- 
 
-  .whoAreWe .descTitle  {
-    font-size: 1rem;
-    position: absolute;
-    margin-top:25px;
-    max-width: 100%;
+.whoAreWeList p {
+    padding-bottom: 100px;
+  }
+
+  .whoAreWeList h1{
+    font-family: 'Overpass', sans-serif;
+    padding-bottom: 25px;
+  }
+
+
+  .whoAreWe .descTitle h1 {
+    font-size: 55px;
+    position: relative;
     font-weight: bold;
     background-image: radial-gradient(circle,
     rgba(255, 255, 255, 1), 
@@ -554,20 +552,21 @@ min-width: 100%;
   -webkit-background-clip: text; /* For WebKit browsers */
   background-clip: text;
   color: transparent;
+  padding-bottom: 35%;
+  right: 10px;
+
     
   }
 
 
 
- 
   .whoAreWe p {
     font-weight: 200;
-    font-size: 1.3rem;
+    font-size: 1rem;
     min-width: fit-content;
-    padding-top:50px;
+    padding-top:20px;
     max-width: 15%;
-    text-align: left;
-    padding-left: 10%;
+    text-align: center;
   }
 
 .whoAreWeDesc{
@@ -581,28 +580,22 @@ min-width: 100%;
     
 }
 .letsWorkBtn,.workoutBtn{
-    background-color: var(--primary-color);
+    background: var(--button-gradient);
     border-radius: 5px;
     min-width: fit-content;
-    max-width: 50px;
-    min-height: fit-content;
-    max-height: fit-content;
-    padding: 5px;
+    padding: 20px;
     color: var(--secondary-color);
+    border: 2px solid;
     margin-bottom: 10px;
     font-size: var(--text-size);
 }
 
 
-.letsWorkBtn:hover{
-    transform: scale(.8);
-}
-
 
 
 /* Testimonials */
 
-.testimonialHeader{
+.trainingHeader{
     font-size: var(--subheader-size);
     position: relative;
     justify-content: center;
@@ -613,7 +606,8 @@ min-width: 100%;
 }
 
 
-  .testimonials p,.testimonials h1 {
+  .trainingHeader p,.trainingHeader h1 {
+    font-family: 'Overpass', sans-serif;
     font-size: .8rem;
     position: relative;
     justify-content: center;
@@ -629,6 +623,8 @@ min-width: 100%;
     align-items: center;
     color: #FFFFFF;
     margin: 0 auto;
+    position: relative;
+    left: 5px;
 
 }
 .subTrainBox2{
@@ -665,77 +661,12 @@ min-width: 100%;
 
 
   /* nav icon */
-.checkbox {
-    position: absolute;
-    display: block;
-    height: 32px;
-    width: 32px;
-    top: 20px;
-    left: 20px;
-    z-index: 5;
-    opacity: 0;
-    cursor: pointer;
-    
-  }
 
-  .hamburger-lines {
-
-    display: block;
-    height: 14px;
-    width: 20px;
-    position: absolute;
-    top: 17px;
-    left: 20px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
- 
+  .container{
+    position: relative;
+    top: 11px;
+    padding-left: 5px;
   }
-
-  .hamburger-lines .line {
-    display: block;
-    height: 3px;
-    width: 100%;
-    border-radius: 10px;
-    background-color: var(--secondary-color);
-  }
-
-  .nav-container .hamburger-lines .line1 {
-    transform-origin: 0% 0%;
-    transition: transform 0.4s ease-in-out;
-  }
-  
-  .nav-container .hamburger-lines .line2 {
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .nav-container .hamburger-lines .line3 {
-    transform-origin: 0% 100%;
-    transition: transform 0.4s ease-in-out;
-  }
-
-  .nav-container input[type="checkbox"]:checked ~ .menu-items {
-    transform: translateX(0);
-  }
-  
-  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-    transform: rotate(45deg);
-  }
-  
-  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
-    transform: scaleY(0);
-  }
-  
-  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-    transform: rotate(-45deg);
-  }
-  
-  .nav-container input[type="checkbox"]:checked ~ .logo{
-    display: none;
-  }
-
-
 /* Animations */
   @keyframes fadeIn {
     0% { opacity: 0; }
@@ -748,3 +679,12 @@ min-width: 100%;
         opacity: 1; /* Fade in to full opacity */
     }
 }
+
+
+a:any-link{
+  color: var(--primary-color);
+  text-decoration: none;
+
+}
+
+

@@ -1,6 +1,6 @@
 // Get a reference to the element with the class "nav-box"
-var navBoxElement = document.querySelector('.highlight');
-var navElement = document.querySelector('nav-container input[type="checkbox"]:checked ~ .menu-items');
+var navBoxElement = document.querySelector('.nav-box');
+var navElement = document.querySelector('.nav-container input[type="checkbox"]:checked ~ .menu-items');
 navBoxElement.addEventListener('click', function() {
     // Your code to run when the element is clicked
     alert('Nav box clicked!');
@@ -8,29 +8,54 @@ navBoxElement.addEventListener('click', function() {
     // You can replace this alert with any other JavaScript code you want to execute.
 });
 
-function toggleMenu() {
-// Toggels the Nav bar 
-monitorWindowSize();
-    var menu = document.querySelector(".line"); 
-    var nav = document.querySelector("nav"); 
-    var navList = document.querySelector(".navList"); 
-    var body = document.querySelector("body"); 
-    var screenWidth = window.innerWidth;
-    const elementToRemove = document.querySelector('.hidden');
+function toggleMenu(event) {
+  var menu = document.querySelector(".navicon");
 
-if (screenWidth <= 850){
-    if (navList.style.display === "block") {
-        navList.style.display = "none"; 
-        nav.style.display = "none"; 
-        document.body.style.overflow = '';
 
-    } else {
-        navList.style.display = "block"; 
-        nav.style.display = "block"; 
-        document.body.style.overflow = "hidden"; 
-    }
+  var navList = document.querySelector(".navList");
+  var menuLinks = navList.querySelectorAll('a');
+  var screenWidth = window.innerWidth;
+
+  var icon = document.querySelector(".navicon");
+
+  if (screenWidth < 850) {
+    menu.addEventListener('click', function() {
+        
+        if (navList.style.display === "block") {
+            navList.style.display = "none";
+            document.documentElement.style.overflow = 'auto';
+            document.documentElement.style.overflowX = 'auto';
+        } else {
+            navList.style.display = "block";
+            icon.style.borderRadius = "5px";
+            icon.style.backgroundColor = "red;"
+            document.documentElement.style.overflow = 'hidden';
+            document.documentElement.style.overflowX = 'hidden';
+
+        }
+    });
+    
+
+        menuLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                navList.style.overflowY = "none"; 
+                navList.style.display = "none";
+                document.documentElement.style.overflow = 'auto';
+                document.documentElement.style.overflowX = 'auto';
+            });
+        });
+        
+
+  }
 }
-}
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.body.addEventListener("click", toggleMenu);
+});
+
+  
+
+
 
 
 const subTrainBox1 = document.querySelector('.subTrainBox1');
@@ -62,3 +87,16 @@ monitorWindowSize();
 
 // Add an event listener to continuously check window size changes
 window.addEventListener('resize', monitorWindowSize);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".navList a");
+  const navToggle = document.getElementById("nav-toggle");
+
+  // Add click event listeners to the navigation links
+  navLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+          navToggle.checked = false; // Uncheck the checkbox to close the navigation
+      });
+  });
+});
