@@ -583,7 +583,6 @@ max-width: 90%;
 .letsWorkBtn,.workoutBtn{
     background: var(--button-gradient);
     border-radius: 5px;
-    min-width: fit-content;
     max-width: 50px;
     min-height: fit-content;
     max-height: fit-content;
